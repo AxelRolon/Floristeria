@@ -1,0 +1,55 @@
+package Tienda;
+
+import java.util.Scanner;
+
+import Productos.Floristeria;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		Floristeria newFloristeria;
+		int usr ; 
+		
+		do {
+			System.out.println("+------------------------------------------+");
+			System.out.println("| Seleccioneu una de les següents opcions: |");
+			System.out.println("+==========================================+");
+			System.out.println("|   1: Crear Nueva Floristeria              ");
+			System.out.println("+------------------------------------------+");
+			System.out.println("|   2: Crear nuevo arbol                   |");
+			System.out.println("|   3: Crear nueva flor                    |");
+			System.out.println("|   4: Crear nueva decoracion              |");
+			System.out.println("|   5: Ver Stock y su valor                |");
+			System.out.println("|   6: Ver todos los productos             |");
+			System.out.println("+------------------------------------------+");
+			System.out.println("|   7: gestionar una compra                |");
+			System.out.println("|   8: imprimir un tiquet anterior          |");
+			System.out.println("+------------------------------------------+");
+			System.out.println("|   9: cerrar                               |");
+			System.out.println("+------------------------------------------+");
+			
+			usr = sc.nextInt();
+			
+			switch (usr) {
+			case 1: {
+				System.out.println("❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃");
+				System.out.println("❃Introduce un nombre para la floristeria❃");
+				System.out.println("❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃❃");
+				String nom = sc.next();
+				new Floristeria(nom);
+				break;
+			}
+			case 2: {
+				 Floristeria arb = new Floristeria();//instanciacion nueva, iniciado con el constructor por defecto "no recibe parametros"
+				 arb.crearArbol();
+				 break;
+			}
+				
+			}
+			
+		} while (usr!=0);
+		
+	}
+}

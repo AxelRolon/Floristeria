@@ -1,0 +1,26 @@
+package Productos;
+
+public class art_Arbol extends Art_Factory {
+
+	protected float alt_arbol;
+	
+	public art_Arbol(String nom_art, double precio, float alt_arbol) {
+		
+		super(nom_art, precio);
+		this.alt_arbol=alt_arbol;
+
+	}
+
+	public float getAlt_arbol() {
+		return alt_arbol;
+	}
+
+	public void setAlt_arbol(float alt_arbol) {
+		this.alt_arbol = alt_arbol;
+	}
+
+
+
+	
+
+}
